@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Task #1",
+      "setup": "",
+      "run": "test -f ./solution/task1.md",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "Task #2",
+      "setup": "",
+      "run": "test -f ./solution/task2.tex",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "Task #3",
+      "setup": "",
+      "run": "test -f ./solution/task3.gv",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "Task #4",
+      "setup": "",
+      "run": "test -f ./solution/task4.gnu",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    }
+  ]
+}

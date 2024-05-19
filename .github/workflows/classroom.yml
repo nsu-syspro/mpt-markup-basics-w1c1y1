@@ -28,7 +28,7 @@ jobs:
       with:
         test-name: 'Task #1'
         setup-command: '' # (Optional) Run before the test is run.
-        command: ./.test/task1/validate
+        command: test -f ./solution/task1.md
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 3 # (Optional) The amount of points awarded if the test passes.
 
@@ -38,7 +38,7 @@ jobs:
       with:
         test-name: 'Task #2'
         setup-command: '' # (Optional) Run before the test is run.
-        command: ./.test/task2/validate
+        command: test -f ./solution/task2.tex
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 3 # (Optional) The amount of points awarded if the test passes.
 
@@ -48,7 +48,7 @@ jobs:
       with:
         test-name: 'Task #3'
         setup-command: '' # (Optional) Run before the test is run.
-        command: ./.test/task3/validate
+        command: test -f ./solution/task3.gv
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 3 # (Optional) The amount of points awarded if the test passes.
 
@@ -58,7 +58,7 @@ jobs:
       with:
         test-name: 'Task #4'
         setup-command: '' # (Optional) Run before the test is run.
-        command: ./.test/task4/validate
+        command: test -f ./solution/task4.gnu
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 1 # (Optional) The amount of points awarded if the test passes.
 

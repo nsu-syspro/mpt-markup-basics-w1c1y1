@@ -22,13 +22,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install make pandoc graphviz gnuplot latexmk texlive-xetex texlive-lang-cyrillic
+
     - name: 'Task #1'
       id: task-1
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: 'Task #1'
         setup-command: '' # (Optional) Run before the test is run.
-        command: test -f ./solution/task1.md
+        command: make task1
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 3 # (Optional) The amount of points awarded if the test passes.
 
@@ -38,7 +43,7 @@ jobs:
       with:
         test-name: 'Task #2'
         setup-command: '' # (Optional) Run before the test is run.
-        command: test -f ./solution/task2.tex
+        command: make task2
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 3 # (Optional) The amount of points awarded if the test passes.
 
@@ -48,7 +53,7 @@ jobs:
       with:
         test-name: 'Task #3'
         setup-command: '' # (Optional) Run before the test is run.
-        command: test -f ./solution/task3.gv
+        command: make task3
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 3 # (Optional) The amount of points awarded if the test passes.
 
@@ -58,7 +63,7 @@ jobs:
       with:
         test-name: 'Task #4'
         setup-command: '' # (Optional) Run before the test is run.
-        command: test -f ./solution/task4.gnu
+        command: make task4
         timeout: 1 # The amount of minutes the test is allowed to run before it is killed. Maximum 60 minutes.
         max-score: 1 # (Optional) The amount of points awarded if the test passes.
 

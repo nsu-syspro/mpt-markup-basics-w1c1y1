@@ -83,6 +83,18 @@ jobs:
       with:
         runners: task-1,task-2,task-3,task-4
 
+    - name: Archive rendered artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: rendered
+        path: |
+          solution/task1.pdf
+          solution/task2.pdf
+          solution/task3.png
+          solution/task4.png
+      if: success() || failure()
+
+
   ############################
   # Generate points bar badge
   #
